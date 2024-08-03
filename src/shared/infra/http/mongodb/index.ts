@@ -17,11 +17,11 @@ async function connectWithMongoDB() {
     await mongoose.connect(uri);
 
     console.log(
-      '[projeto DB] MongoDB connection has been established successfully.',
+      '[cool_conect_api] MongoDB connection has been established successfully.',
     );
   } catch (error) {
     console.error(
-      '[projeto DB] Unable to connect to the MongoDB database:',
+      '[cool_conect_api Unable to connect to the MongoDB database:',
       error,
     );
   }

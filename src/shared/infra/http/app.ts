@@ -8,7 +8,6 @@ import cors from 'cors';
 import express, { NextFunction, Request, Response } from 'express';
 import basicAuth from 'express-basic-auth';
 import http from 'http';
-import { Server } from 'socket.io';
 import swaggerUi from 'swagger-ui-express';
 
 import AppError from '@/shared/errors/AppError';
@@ -18,7 +17,6 @@ import { routes } from './routes';
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server);
 
 app.use(cors());
 app.use(express.json());
@@ -69,4 +67,4 @@ app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
   });
 });
 
-export { app, io, server };
+export { app, server };
