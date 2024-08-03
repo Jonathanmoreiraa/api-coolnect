@@ -1,5 +1,8 @@
 # CoolConect API
-'colocar resumo'
+
+O projeto CoolConect API busca propor uma plataforma de comunicação com ex-alunos (egressos).
+
+Com o foco em conectar os alunos entre si, permitindo que apresentem suas experiências de trabalho, triunfos (certificações/publicações), e até mesmo aspectos de lazer.
 
 ## Tecnologias Principais
 
@@ -29,26 +32,29 @@
 git clone https://github.com/seu-usuario/"colocar_reposito.git"
 cd lab-equester-manager-api
 ```
+
 2. **Instale as dependências:**:
 ```bash
 npm install
 ou
 yarn
 ```
-2. **Configure as variáveis de ambiente:**:
+
+3. **Configure as variáveis de ambiente:**:
 - Crie um arquivo .env na raiz do projeto com as seguintes variáveis:
 Certifique-se de configurar corretamente a MONGODB_URI com sua própria URL do MongoDB.
 ```bash
 PORT=3000
 MONGODB_URI=sua_url_de_conexão_com_o_MongoDB
 ```
-3. **Execute o servidor em modo de desenvolvimento:**:
+
+4. **Execute o servidor em modo de desenvolvimento:**:
 ```bash
 npm run dev
 yarn dev
 ```
 
-3. **Acesse a documentação da AP:**:
+5. **Acesse a documentação da AP:**:
 - Após iniciar o servidor, a documentação Swagger estará disponível em:
 ```bash
 http://localhost:3000/api-docs
@@ -57,41 +63,39 @@ http://localhost:3000/api-docs
 ## Estrutura do Projeto
 A estrutura do projeto está organizada da seguinte forma:
 ```bash
-rst-pista-api/
+
+api/
 │
-├── dist/                 # Código compilado
-├── src/                  # Código-fonte TypeScript
-│   ├── configs/          # Configurações da aplicação
-│   ├── functions/        # Funções da aplicação
-│   │   └── points/       # Pontuação
-│   ├── infra/            # Infraestrutura
-│   │   ├── entities/     # Entidades
-│   │   └── http/         # Camada HTTP
-│   │       ├── controller/  # Controladores HTTP
-│   │       └── routes/      # Rotas HTTP
-│   ├── interfaces/       # Interfaces da aplicação
-│   │   └── Responses/    # Respostas
-│   ├── services/         # Serviços da aplicação
-│   └── shared/           # Compartilhado
-│       ├── errors/       # Erros
-│       ├── infra/        # Infraestrutura compartilhada
-│       │   └── http/     # Camada HTTP compartilhada
+├── dist/                     # Código compilado
+├── src/                      # Código-fonte TypeScript
+│   ├── configs/              # Configurações da aplicação
+│   ├── functions/            # Funções da aplicação
+│   │   └── points/           # Pontuação
+│   ├── infra/                # Infraestrutura
+│   │   ├── entities/         # Entidades
+│   │   └── http/             # Camada HTTP
+│   │       ├── controller/   # Controladores HTTP
+│   │       └── routes/       # Rotas HTTP
+│   ├── interfaces/           # Interfaces da aplicação
+│   │   └── Responses/        # Respostas
+│   ├── services/             # Serviços da aplicação
+│   └── shared/               # Compartilhado
+│       ├── errors/           # Erros
+│       ├── infra/            # Infraestrutura compartilhada
+│       │   └── http/         # Camada HTTP compartilhada
 │       │       └── mongodb/  # MongoDB
-│       └── http/         # Camada HTTP compartilhada
-│           ├── controller/  # Controladores HTTP compartilhados
-│           └── routes/      # Rotas HTTP compartilhadas
+│       └── http/             # Camada HTTP compartilhada
+│           ├── controller/   # Controladores HTTP compartilhados
+│           └── routes/       # Rotas HTTP compartilhadas
 │
-├── .env                  # Arquivo de configuração de variáveis de ambiente
-├── .editorconfig         # Configuração do editor
-├── .eslintignore         # Arquivos e diretórios a serem ignorados pelo ESLint
-├── .eslintrc.json        # Configuração do ESLint
-├── .gitignore            # Arquivos e diretórios a serem ignorados pelo Git
-├── LICENSE               # Licença do projeto
-├── package.json          # Lista de dependências e scripts
-├── prettier.config.js    # Configuração do Prettier
-├── README.md             # Informações sobre o projeto
-└── tsconfig.json         # Configuração do TypeScript
-
-
-
+├── .env                      # Arquivo de configuração de variáveis de ambiente
+├── .editorconfig             # Configuração do editor
+├── .eslintignore             # Arquivos e diretórios a serem ignorados pelo ESLint
+├── .eslintrc.json            # Configuração do ESLint
+├── .gitignore                # Arquivos e diretórios a serem ignorados pelo Git
+├── LICENSE                   # Licença do projeto
+├── package.json              # Lista de dependências e scripts
+├── prettier.config.js        # Configuração do Prettier
+├── README.md                 # Informações sobre o projeto
+└── tsconfig.json             # Configuração do TypeScript
 ```
