@@ -20,6 +20,11 @@ userRouter.post(
       email: Joi.string().email().required(),
       avatar: Joi.string(),
       password: Joi.string().required(),
+      questions: Joi.object({
+        firstAnimal: Joi.string(),
+        firstTeacher: Joi.string(),
+        cityFathers: Joi.string(),
+      }),
     },
   }),
   userController.create,
