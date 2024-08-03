@@ -5,7 +5,9 @@ import { CreatePostService } from '@/services/CreatePostService';
 
 export class PostController {
   async create(request: Request, response: Response): Promise<Response> {
-    const { name, userId, description, image } = request.body;
+    const { name, description, image } = request.body;
+
+    const userId = request.user.id;
 
     const createPostService = container.resolve(CreatePostService);
 
