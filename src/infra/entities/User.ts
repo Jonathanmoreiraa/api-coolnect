@@ -22,13 +22,25 @@ const UserSchema = new Schema(
       type: String,
       select: false,
     },
-
-    avatar: {
-      type: String,
-    },
-    active: {
-      type: String,
-      default: true,
+    events: [
+      {
+        _id: {
+          type: Schema.Types.ObjectId,
+          default: null,
+          ref: 'events',
+        },
+      },
+    ],
+    questions: {
+      firstAnimal: {
+        type: String,
+      },
+      firstTeacher: {
+        type: String,
+      },
+      cityFathers: {
+        type: String,
+      },
     },
   },
   {
