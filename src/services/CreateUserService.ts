@@ -10,6 +10,11 @@ interface IRequest {
   email: string;
   avatar?: string;
   password: string;
+  questions?: {
+    firstAnimal?: string;
+    firstTeacher?: string;
+    cityFathers?: string;
+  };
 }
 
 export class CreateUserService {
@@ -19,6 +24,7 @@ export class CreateUserService {
     email,
     avatar,
     password,
+    questions,
   }: IRequest): Promise<void> {
     const Collaborator = mongoose.model<IUserMongooseSchema>('users');
 
@@ -36,6 +42,7 @@ export class CreateUserService {
       email,
       avatar,
       password: passwordHash,
+      questions,
     });
 
     await collaborator.save();

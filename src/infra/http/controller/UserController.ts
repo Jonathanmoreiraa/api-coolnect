@@ -5,7 +5,7 @@ import { CreateUserService } from '@/services/CreateUserService';
 
 export class UserController {
   async create(request: Request, response: Response): Promise<Response> {
-    const { name, phone, email, avatar, password } = request.body;
+    const { name, phone, email, avatar, password, questions } = request.body;
 
     const createUserService = container.resolve(CreateUserService);
 
@@ -15,6 +15,7 @@ export class UserController {
       email,
       avatar,
       password,
+      questions,
     });
 
     return response.status(200).send();
