@@ -2,14 +2,24 @@
 
 # Api do projeto- Coolnect
 
+### Pré-requisitos:
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+
+```
+Docker - Versão: 27.1.1, build 6312585
+Docker Compose - Versão: v2.29.1
+```
+
 # Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- [Docker](https://www.docker.com/)
-- [MongoDB](https://www.mongodb.com/)
-- [NodeJS](https://nodejs.org/)
-- [TypeScript](https://vuejs.org/)
+- [Docker           - Versão: 27.1.1, build 6312585](https://www.docker.com/)
+- [Docker Compose   - Versão: 27.1.1, build 6312585](https://www.docker.com/)
+- [MongoDB          - Versão: latest](https://www.mongodb.com/)
+- [NodeJS           - Versão: 20.x.x](https://nodejs.org/)
+- [TypeScript       - Versão: 5.1](https://vuejs.org/)
 
 Frameworks:
 - [MongooseJS](https://mongoosejs.com/)
